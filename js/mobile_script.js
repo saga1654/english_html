@@ -14,6 +14,7 @@ $(function(){
 		// 메인페이지 panel br태그 제거
 		if(path.indexOf('index.html') > -1){
 
+			/*
 			var str1 = $('.panel_li.first .han').html();
 			var str2 = $('.panel_li.second .han').html();
 			var str3 = $('.panel_li.thirth .han').html();
@@ -27,7 +28,8 @@ $(function(){
 			$('.panel_li.second .han').html(res2);
 			$('.panel_li.thirth .han').html(res3);
 			$('.panel_li.fourth .han').html(res4);
-		}		
+			*/
+		}
 	}
 
 	if(w <= 360){
@@ -39,7 +41,8 @@ $(function(){
 
 	setSurveyNavigation();
 
-	// 학술조사,마케팅조사,링크제공조사,해외조사 링크버튼 on
+
+
 	 function setSurveyNavigation() {
 
 	 	surveyArray = ['academy','smbc','panel_link','international'];
@@ -93,6 +96,11 @@ $(document).ready(function(){
 	$('.login_box_popup .close').click(function(){
 		$('.bg').fadeOut();
 		$(this).parent().hide();
+	});
+
+	/**** 상단 내용 닫기 및 추가 ****/
+	$("#wrap #header_top .btn").click(function() {
+		alert("OK");
 	});
 
 	function login_pop_init(){

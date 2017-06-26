@@ -18,6 +18,24 @@
 </head>
 <body>
 	<div id="wrap">
+		<div id="header_top">
+			<div id="left">
+				<ul>
+					<li>회원가입</li>
+					<li>페이스북</li>
+					<li>트위터</li>
+				</ul>
+			</div>
+			<div id="right">
+				<select>
+					<option value="">Language</option>
+				</select>
+			</div>
+
+			<div class="btn">
+				닫기
+			</div>
+		</div>
 		<div id="header">
 			<h1>
 				<a href="index.html">
@@ -49,233 +67,32 @@
 			<button type="button" class="btn_gnb_close">닫기</button>
 		</div>
 		<div id="container" class="main">
+			<!--  메인 이미지 구현 -->
 			<div class="visual">
+				<!--  내용 구현 -->
 				<div class="main_txt">
-					<img src="images/main/main_txt.png" alt="SURVEY STATION" width="260" />
 				</div>
 			</div>
+
+			<!-- 하위 내용 구현 -->
 			<div class="panel">
-				<a href="sub/academy.html">
-					<div class="panel_li first">
-						<div class="panel_img">
-							<img src="images/main/panel_img1.png" alt="" />
-						</div>
-						<div class="panel_txt">
-							<p class="han">논문 및 연구과제 수행을<br />위한 학술 조사</p>
-							<p class="eng">(Academy Survey Station)</p>
-						</div>
-						<div class="panel_more">
-							<img src="images/main/panel_more.png" alt="" />
-						</div>
-					</div>
-				</a>
-				<a href="sub/smbc.html">
-					<div class="panel_li second">
-						<div class="panel_img">
-							<img src="images/main/panel_img2.png" alt="" />
-						</div>
-						<div class="panel_txt">
-							<p class="han">중소기업 및 개인사업자를<br />위한 마케팅 조사</p>
-							<p class="eng">(SMBC Survey Station)</p>
-						</div>
-						<div class="panel_more">
-							<img src="images/main/panel_more.png" alt="" />
-						</div>
-					</div>
-				</a>
-				<a href="sub/panel_link.html">
-					<div class="panel_li thirth">
-						<div class="panel_img">
-							<img src="images/main/panel_img3.png" alt="" />
-						</div>
-						<div class="panel_txt">
-							<p class="han">패널 대여 링크 제공 조사</p>
-							<p class="eng line1">(Panel Link Survey Station)</p>
-						</div>
-						<div class="panel_more">
-							<img src="images/main/panel_more.png" alt="" />
-						</div>
-					</div>
-				</a>
-				<a href="sub/international.html">
-					<div class="panel_li fourth">
-						<div class="panel_img">
-							<img src="images/main/panel_img4.png" alt="" />
-						</div>
-						<div class="panel_txt">
-							<p class="han">해외조사</p>
-							<p class="eng line1">(International Survey Station)</p>
-						</div>
-						<div class="panel_more">
-							<img src="images/main/panel_more.png" alt="" />
-						</div>
-					</div>
-				</a>
+
 			</div>
-		</div> 
+		</div>
+
+		<!-- 하단 내용 구현 -->
 		<div id="footer">
-			<h2><img src="images/main/bottom_logo.png" alt="SURVEY STATION" /></h2>
+			<h2>국내 최초, 특허 받은 전화영어수 - 라이브잉글리시클래스</h2>
 			<p class="address">
-				(주)마켓링크 | 대표 : 강민주 | 사업자등록번호 : 110-81-93993<br />
-				서울특별시 서대문구 경기대로 15 (충정로3가) 엘림넷빌딩4층<br />
-				고객센터 : <a href="tel:1588-0876">1588-0876</a> | 팩스 : 02-313-5705<br />
-				이메일 : master@surveystation.co.kr
+				Q&A | 070-4656-7465 | 이용약관 | PC버전보 <br>
+				상호 : 큐스퀘어 | 사업자등록번호: 113-22-99607 | 대표: 이진만
 			</p>
 			<p class="copyright">
-				&copy; SURVEYSTATION Co., Ltd. ALL RIGHTS RESERVED.
+				&copy; 2017, CubeSquare Co., LTD All Rights Reserved
 			</p>
 		</div>
 	</div>
 	
-	<!-- 로그인팝업 -->
-	<div class="login_popup login_box_popup">
-		<div class="login_box_popup_top popup_top">
-			<h3 class="logo">
-				<img src="images/sub/popup/login_logo.png" alt="SURVEY STATION" />
-			</h3>
-		</div>
-		<div class="login_box_popup_bottom">
-			<h4>로그인</h4>
-			<form>
-				<fieldset>
-					<div class="input_wrap">
-						<label for="input_login_email" class="blind">입력 이메일</label>
-						<input type="text" id="input_login_email" placeholder="이메일을 입력해주세요." /><br />
-						<label for="input_login_password" class="blind">입력 비밀번호</label>
-						<input type="password" id="input_login_password" placeholder="비밀번호를 입력해주세요." />
-					</div>
-					<button type="submit" class="btn_login">
-						<img src="images/sub/popup/txt_login.png" alt="로그인" />
-					</button>
-				</fieldset>
-			</form>
-			<div class="bar"></div>
-			<div class="join_btn_wrap">
-				<ul>
-					<li><a href="javascript:void(0)" class="btn_login_join">회원가입</a></li>
-					<li><a href="javascript:void(0)" class="btn_login_findemail">이메일 찾기</a></li>
-					<li><a href="javascript:void(0)" class="btn_login_findpw">비밀번호 찾기</a></li>
-				</ul>
-			</div>
-		</div>
-		<button type="button" class="close"></button>
-	</div>
-
-	<!-- 회원가입 팝업 -->
-	<div class="join_popup login_box_popup">
-		<div class="join_popup_top popup_top">
-			<h3 class="logo">
-				<img src="images/sub/popup/login_logo.png" alt="SURVEY STATION" />
-			</h3>
-		</div>
-		<div class="login_bar"></div>
-		<div class="join_popup_bottom">
-			<h4>회원가입</h4>
-			<p class="login_txt">아래 가입하는 이메일 &amp; 비밀번호 정보는 추후 로그인 하실 때 필요한 정보입니다.</p>
-			<form>
-				<fieldset>
-					<div class="input_wrap">
-						<label for="input_join_email" class="blind">입력 이메일</label>
-						<span class="join_icon1"></span>
-						<input type="text" id="input_join_email" placeholder="이메일을 입력해주세요." />
-						<button type="submit" class="btn_repetition">
-							<img src="images/sub/popup/txt_repetition.png" alt="중복확인" />
-						</button>
-						<label for="input_join_password" class="blind">입력 비밀번호</label>
-						<span class="join_icon2"></span>
-						<input type="password" id="input_join_password" placeholder="비밀번호를 입력해주세요." />
-						<label for="input_join_repassword" class="blind">재입력 비밀번호</label>
-						<input type="password" id="input_join_repassword" placeholder="비밀번호를 재입력해주세요." />
-					</div>
-					
-				</fieldset>
-			</form>
-			<button type="submit" class="btn_join">
-				<img src="images/sub/popup/txt_join.png" alt="회원가입" />
-			</button>
-		</div>
-		<button type="button" class="close"></button>
-	</div>
-
-	<!-- 가입한 이메일 찾기 팝업 -->
-	<div class="find_email_popup login_box_popup">
-		<div class="find_email_popup_top popup_top">
-			<h3 class="logo">
-				<img src="images/sub/popup/login_logo.png" alt="SURVEY STATION" />
-			</h3>
-		</div>
-		<div class="login_bar"></div>
-		<div class="find_email_popup_bottom">
-			<h4>가입한 이메일 찾기</h4>
-			<p class="login_txt">가입한 이메일 정보를 찾기 위해 인증번호를 받으실 이메일을 입력해주세요.</p>
-			<form>
-				<fieldset>
-					<div class="input_wrap">
-						<label for="input_findemail_email" class="blind">입력 이메일</label>
-						<span class="join_icon1"></span>
-						<input type="text" id="input_findemail_email" placeholder="이메일을 입력해주세요." />
-						<div class="confirm_resend_wrap">
-							<button type="submit" class="btn_findemail_confirm">
-								<img src="images/sub/popup/txt_confirm.png" alt="확인" />
-							</button>
-							<button type="submit" class="btn_findemail_resend">
-								<img src="images/sub/popup/txt_resend.png" alt="재발송" />
-							</button>
-						</div>
-					</div>
-				</fieldset>
-			</form>
-			<div class="bar"></div>
-			<div class="find_email_certification_wrap">
-				<label for="input_findemail_number" class="blind"></label>
-				<input type="text" id="input_findemail_number" placeholder="인증번호를 입력해주세요." />
-				<button type="submit" class="btn_certification">
-					<img src="images/sub/popup/txt_certification.png" alt="인증" />
-				</button>
-			</div>
-		</div>
-		<button type="button" class="close"></button>
-	</div>
-
-	<!-- 가입한 비밀번호 찾기 팝업 -->
-	<div class="find_password_popup login_box_popup">
-		<div class="find_password_popup_top popup_top">
-			<h3 class="logo">
-				<img src="images/sub/popup/login_logo.png" alt="SURVEY STATION" />
-			</h3>
-		</div>
-		<div class="login_bar"></div>
-		<div class="find_password_popup_bottom">
-			<h4>가입한 비밀번호 찾기</h4>
-			<p class="login_txt">가입한 이메일 정보가 기억나지 않을 경우에는 아이디 찾기를 찾으신 후 진행해주세요. 최종 인증시 해당 이메일로 비밀번호가 전송됩니다.</p>
-			<form>
-				<fieldset>
-					<div class="input_wrap">
-						<label for="input_findpw_email" class="blind">가입한 이메일</label>
-						<span class="join_icon1"></span>
-						<input type="text" id="input_findpw_email" placeholder="가입한 이메일" />
-						<div class="confirm_resend_wrap">
-							<button type="submit" class="btn_findemail_confirm">
-								<img src="images/sub/popup/txt_confirm.png" alt="확인" />
-							</button>
-							<button type="submit" class="btn_findemail_resend">
-								<img src="images/sub/popup/txt_resend.png" alt="재발송" />
-							</button>
-						</div>
-					</div>
-				</fieldset>
-			</form>
-			<div class="bar"></div>
-			<div class="find_password_certification_wrap">
-				<label for="input_findpw_number" class="blind"></label>
-				<input type="text" id="input_findpw_number" placeholder="인증번호를 입력해주세요." />
-				<button type="submit" class="btn_certification">
-					<img src="images/sub/popup/txt_certification.png" alt="인증" />
-				</button>
-			</div>
-		</div>
-		<button type="button" class="close"></button>
-	</div>
 
 	<!-- 팝업배경 -->
 	<div class="bg"></div>

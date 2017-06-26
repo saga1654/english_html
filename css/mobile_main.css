@@ -14,6 +14,16 @@
   opacity: 0.5;}
 
 #wrap {letter-spacing:-1px;height:100%;}
+
+/*** 상단 페이스북 및 아이콘 ***/
+#header_top { overflow:hidden;border:1px solid #ccc;   }
+#header_top #left { float:left; }
+#header_top #left ul {overflow:hidden;padding:24px; }
+#header_top #left ul li {display:inline-block;}
+
+#header_top #right { float:right; display:inline-block; padding:24px; }
+#header_top .btn {  overflow:hidden; display:inline-block; width:100%; text-align:center; }
+/*** 로고 ****/
 #header {height:68px;overflow:hidden;}
 #header h1 {float:left;margin:9px 0 0 21px;}
 #header .btn_gnb {background:url(../images/common/btn_gnb.png) no-repeat;width:28px;height:22px;float:right;display:inline-block;text-indent:-9999em;margin:23px 22px 0 0;}

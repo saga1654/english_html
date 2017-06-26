@@ -47,42 +47,12 @@
 .login_box_popup input {height:42px;line-height:42px;width:100%;padding-left:24px;border:1px solid #c4c4c4;letter-spacing:-1px;}
 .login_box_popup .close {position:absolute;right:28px;top:22px;text-indent:-9999em;background:url(../images/sub/popup/login_close.png) no-repeat 0 0;width:26px;height:25px;}
 
-/*로그인 팝업*/
-.login_box_popup_bottom {overflow:hidden;width:85%;margin:0 auto;}
-.login_popup input {margin-bottom:14px;}
-.btn_login {display:inline-block;width:100%; height:42px;background:#4199a7;}
-.login_box_popup .bar {border-bottom:1px solid #ccc;margin:38px auto 17px;}
-.join_btn_wrap {margin:0 auto;width:100%;text-align:center;padding-bottom:320px;}
-.join_btn_wrap ul li {display:inline-block;width:31%;}
-.join_btn_wrap ul li a {display:block;line-height:33px;height:33px;border:1px solid #c4c4c4;font-size:14px;color:#999;text-align:center;letter-spacing:-1px;}
-.join_btn_wrap ul li:first-child a {color:#7dbe2a;}
-.join_btn_wrap ul li:nth-child(2) a {margin:0 1%;}
 
-/*회원가입 팝업*/
-.join_popup.login_box_popup h4 {padding-bottom:30px;}
-.join_popup .join_popup_bottom {width:85%;margin:0 auto;}
-.join_popup input {margin-bottom:14px;}
-.join_popup .btn_repetition {display:inline-block;background:#c4c4c4;width:100%;height:42px;margin-bottom:14px;}
-.login_box_popup.join_popup .bar {margin:28px 0;}
-.btn_join {display:block;width:100%;background:#4199a7;height:42px;margin:0 auto 320px;}
+#container.main { padding:10px; }
+#container.main .main_gnb_title { float:left; padding:10px 0px 10px 10px; }
+#container.main .main_gnb_detail { text-align:right; padding:0px; }
+#container.main .main_contents { width:100%; font-size:12px; text-align:center; padding:30px 0px; background-color:#ccc; margin-top:10px; }
 
-/*가입한 이메일 찾기 팝업*/
-.find_email_popup .find_email_popup_bottom {width:85%;margin:0 auto;}
-.find_email_popup.login_box_popup h4 {padding-bottom:30px;}
-.confirm_resend_wrap {overflow:hidden;padding-top:14px;}
-.btn_findemail_confirm {float:left;width:47% !important;}
-.btn_findemail_resend {float:right;width:47% !important;}
-.btn_findemail_confirm, .btn_findpw_confirm {display:inline-block;background:#4199a7;width:100%; height:42px;}
-.btn_findemail_resend, .btn_findpw_resend {display:inline-block;background:#c4c4c4;width:100%; height:42px;}
-.btn_certification {display:inline-block;background:#4199a7;width:100%; height:42px;margin-top:14px;}
-.find_email_certification_wrap {padding-bottom:320px;}
-.login_box_popup.find_email_popup .bar {margin:18px 0;}
-.find_email_popup .join_icon1 {vertical-align:middle;}
-
-/*가입한 비밀번호 찾기 팝업*/
-.find_password_popup.login_box_popup h4 {padding-bottom:30px;}
-.find_password_popup .find_password_popup_bottom {width:85%;margin:0 auto;}
-.find_password_certification_wrap {margin-bottom:320px;}
 
 #container.main .visual {background:url(../images/main/main_img.jpg) no-repeat;width:100%;height:385px;background-size:cover;}
 .main_txt {text-align:center;padding-top:125px;}

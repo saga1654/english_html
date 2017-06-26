@@ -11,10 +11,63 @@
 	<link href="css/mobile_main.css" rel="stylesheet" type="text/css"/>
 	<link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
 
+
+	<link href="css/swiper.css" rel="stylesheet" type="text/css">
+
+
+	<style>
+		.swiper-container {
+			width: 100%;
+			padding:40px 0px 40px 0px;
+
+		}
+		.swiper-slide {
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+		}
+
+		.swiper-slide .swiper_title {
+			font-size:1.0em;
+			text-align:center;
+			text-align:left;
+
+			padding:0px 50px 20px 50px;
+		}
+
+		.swiper-slide .swiper_title p {
+			padding:3px 5px 3px 5px;
+		}
+
+		.swiper-slide .swiper_contents {
+			font-size:0.8em;
+			text-align:left;
+			padding:0px 50px 20px 50px;
+		}
+		.swiper-slide .swiper_contents p {
+			padding:3px 5px 3px 5px;
+		}
+
+		.swiper-slide .btn_swiper {
+			width:100%;
+			text-align:left;
+			padding:100px 50px 20px 50px;
+		}
+
+
+		.tuition-swiper-container {
+			width: 100%;
+			height: 300px;
+			margin: 20px auto;
+		}
+
+	</style>
+
 	<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
 	<script src="js/jquery-ui.min.js" type="text/javascript"></script>
 	<script src="js/mobile_script.js" type="text/javascript"></script>
-	<title>SURVEY STATION</title>
+	<script src="js/swiper.min.js" stpe="text/javascript"></script>
+	<title>라이브잉글리시클래스</title>
 </head>
 <body>
 	<div id="wrap">
@@ -66,16 +119,92 @@
 			</ul>
 			<button type="button" class="btn_gnb_close">닫기</button>
 		</div>
-		<div id="container" class="main">
-			<!--  메인 이미지 구현 -->
-			<div class="visual">
-				<!--  내용 구현 -->
-				<div class="main_txt">
+
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="swiper_title">
+						<p>글로벌 전화영어회화 수업</p>
+						<p>라이브잉글리시클래스</p>
+					</div>
+					<div class="swiper_contents">
+						<p>국내유일, 미국/영국으로 수출하는 전화영어</p>
+						<p>저렴한 가격에 1대1 영어회화를 학습할 기회</p>
+						<p>지금 무료 레벨테스트를 받아보세요!</p>
+					</div>
+
+					<div class="btn_swiper">
+						<button type="button" class="btn_default">자세히보기</button>
+						<button type="button" class="btn_default">수강신청</button>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="swiper_title">
+						<p>합리적인 가격에 만나는</p>
+						<p>특허받은 전화영어 수업</p>
+					</div>
+					<div class="swiper_contents">
+						<p>라이브잉글리시클래스는 1천가지가 넘는</p>
+						<p>다양한 수업 패키지를 제공합니다.</p>
+						<p>원하시는 조건을 간편하게 선택하셔서 다양한</p>
+						<p>수업 패키지를 저렴하게 만나보세요.!</p>
+					</div>
+
+					<div class="btn_swiper">
+						<button type="button" class="btn_default">자세히보기</button>
+						<button type="button" class="btn_default">수강신청</button>
+					</div>
 				</div>
 			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+		</div>
+		<div id="container" class="main">
 
-			<!-- 하위 내용 구현 -->
-			<div class="panel">
+
+			<!-- 수강료 -->
+			<div class="tuition">
+				<div class="main_gnb_title">수강료</div>
+				<div class="main_gnb_detail">
+					<button type="button" class="btn_default">자세히보기</button>
+				</div>
+
+				<div class="main_contents">
+					라이브잉글리시클래스의 전화영어 수업은 15분 / 20분 / 30분 / 55분 등 다양한 선택의 폭이 있습니다.
+				</div>
+
+				<div class="tuition-swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">Slide 1</div>
+						<div class="swiper-slide">Slide 2</div>
+						<div class="swiper-slide">Slide 3</div>
+						<div class="swiper-slide">Slide 4</div>
+						<div class="swiper-slide">Slide 5</div>
+						<div class="swiper-slide">Slide 6</div>
+						<div class="swiper-slide">Slide 7</div>
+						<div class="swiper-slide">Slide 8</div>
+						<div class="swiper-slide">Slide 9</div>
+						<div class="swiper-slide">Slide 10</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="tuition-swiper-pagination"></div>
+
+					<div class="tuition-swiper-button-next"></div>
+					<div class="tuition-swiper-button-prev"></div>
+				</div>
+
+			</div>
+
+
+			<!-- 코스 -->
+			<div class="tuition">
+
+			</div>
+
+
+			<!-- 수강료 -->
+			<div class="tuition">
 
 			</div>
 		</div>
@@ -98,4 +227,30 @@
 	<div class="bg"></div>
 
 </body>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+
+    var swiper_tuition = new Swiper('.tuition-swiper-container', {
+        pagination: '.tuition-swiper-pagination',
+        nextButton: '.tuition-swiper-button-next',
+        prevButton: '.tuition-swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+
+</script>
+
 </html>

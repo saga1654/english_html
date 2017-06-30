@@ -1,0 +1,63 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+/*로그인 ,비밀번호 찾기 회원가입페이지 공통*/
+.clear{clear: both;}
+.red{color:#ff0000; font-size: 10px; text-align: left;}
+.bar {border-left:1px solid #ccc;height:140px;display:inline-block;padding-right:10px;}
+.close {position:absolute;right:0;top:0;background:url(../images/sub/btn_close.gif) no-repeat 0 0;width:40px;height:40px;display:block;text-indent:-9999em;}
+.login_page, .pw_page {width: 100%;padding: 8% 0 0;margin: auto;}
+#header {position: relative;z-index: 1;background: #FFFFFF;max-width: 750px;margin: 0 auto ;padding: 30px;text-align: center;}
+#header img{width: 90%;}
+#header p{ margin: 15px 0 0;color: #3d6d9a;font-size: 20px;}
+.form {position: relative;z-index: 1;background: #FFFFFF;max-width: 100%;margin: 0 auto ;padding: 20px;text-align: center;border-bottom-style: solid;border-bottom-color:#3d6d9a;}
+.form input:not(#sign) {font-family: "Malgun Gothic", sans-serif;outline: 0;background: #f2f2f2;width: 100%;border:0;margin: 0 0 15px;padding: 15px;box-sizing: border-box;font-size: 14px;}
+.form input[type="checkbox"] {position: absolute;width: 10px;height: 10px;padding: 0;border: 0;}
+.form button {font-family: "Malgun Gothic", sans-serif;text-transform: uppercase;outline: 0;background: #3d6d9a;width: 100%;border: 0;padding: 15px;color: #FFFFFF;font-size: 16px;cursor: pointer;}
+.form p{margin: 15px 0 0;color: #b3b3b3;font-size: 16px;}
+.form button:hover,.form button:active,.form button:focus {background: #3d6d9a;}
+
+
+/*비밀번호 찾기 헤더*/
+#header_box{text-align: center;}
+#pw_header{position: relative;z-index: 1;background: #FFFFFF;max-width: 750px;margin: 0 auto ;padding: 10px;text-align: center;}
+#pw_box{border-style: solid; border-color: #3d6d9a;}
+#pw_header img{width: 30%;text-align: left;float:left;padding-left: 10px;}
+.pw{width: 70%;}
+.pw_form {position: relative;z-index: 1;background: #FFFFFF;max-width: 100%;margin: 0 auto ;padding: 20px;text-align: center;border-bottom-style: solid;border-bottom-color:#3d6d9a;}
+.pw_form input,select {font-family: "Malgun Gothic", sans-serif;outline: 0;background: #f2f2f2;width: 100%;border: 0;margin: 0 0 15px;padding: 15px;box-sizing: border-box;font-size: 14px;}
+.send{float:left; width: 48%;}
+.cancel{float:right;width: 48%;}
+.pw_form button {font-family: "Malgun Gothic", sans-serif;text-transform: uppercase;outline: 0;background: #3d6d9a;width: 100%;border: 0;padding: 15px;color: #FFFFFF;font-size: 16px;cursor: pointer;}
+.pw_form h1{ color:#3d6d9a;display: block;font-size: 2em;margin-top: 0.67em;margin-bottom: 0.67em;margin-left: 0;margin-right: 0;}
+
+
+/*로그인 ,비밀번호 찾기 회원가입페이지 공통*/
+.message {margin: 15px 0 0;color: #b3b3b3;font-size: 12px;}
+.message a {color: #3d6d9a;text-decoration: none; padding-top: 20px; padding-bottom: 20px;}
+.message2 a {color: #3d6d9a;text-decoration: none; padding-top: 20px; padding-bottom: 20px;}
+#footer {position: relative;z-index: 1;background: #FFFFFF;max-width: 100%;text-align: center;}
+body {background: #ffffff; /* fallback for old browsers */font-family: "Malgun Gothic", sans-serif;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+
+/*회원약관*/
+.rule_inner{padding: 20px; margin:30px 10px 10px 10px;border: 1px solid #c9c9c9;}
+.rule_inner ol, .rule_inner p, .rule_inner ul {
+    padding: 0 5px 5px; font-weight: 400;
+}
+.rule_inner p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.rule_inner h5 {
+    display: block;
+    font-size: 1em;
+    -webkit-margin-before: 1.67em;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}

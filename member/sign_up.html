@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xml:lang="ko" lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no">
+    <link href="../css/common.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/mobile_member.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+
+    <script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="../js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../js/mobile_script.js" type="text/javascript"></script>
+    <title>회원가입</title>
+</head>
+<body>
+
+<div class="login_page">
+    <div id="header">
+        <img src="../images/common/logo.png" alt="LiveEnglishClass" />
+        <p>라이브잉글리시클래스</p>
+    </div>
+    <div class="form">
+        <form class="login-form">
+            <p class="red">필수 입력 항목</p>
+            <input type="text" placeholder="아이디(이메일)"/>
+            <input type="password" placeholder="비밀번호"/>
+            <input type="password" placeholder="비밀번호 확인"/>
+            <input type="text" placeholder="한글이름"/>
+            <input type="text" placeholder="영어이름"/>
+            <input type="text" placeholder="연락처(전화번호 입력시 지역번호 포함)"/>
+            <select id="national">
+                <option value="">국적</option>
+                <option value="">나라1</option>
+                <option value="">나라2</option>
+                <option value="">나라3</option>
+            </select>
+            <select id=timeZone>
+                <option value="">Asia/Seoul (UTC/GMT +09:00)</option>
+                <option value="">TimeZone2</option>
+                <option value="">TimeZone3</option>
+                <option value="">TimeZone4</option>
+            </select>
+            <p class="red">선택항목</p>
+            <input type="text" id="birth" placeholder="yyyy-mm-dd" />
+            <ul>
+                <li>
+                    <label for="m">
+                        <input type="radio" name="m" value="" id="m" /><span>남성</span>
+                    </label>
+                    <label for="w">
+                        <input type="radio" name="w" value="" id="w" /><span>여성</span>
+                    </label>
+                </li>
+            </ul>
+            <input type="text" id="skypeId" placeholder="스카이프 ID (스카이프 수업을 원할 경우 입력)" />
+            <input type="text" id="MD" placeholder="마케터" />
+            <input type="text" id="MD" placeholder="전하고 싶은 말" />
+
+            <div class="message checks"><input type="checkbox"/> <a href="../member/terms.html" target="_blank">이용약관</a>에 동의합니다.</div>
+            <button>동의하고 가입하기</button>
+        </form>
+    </div>
+    <div></div>
+    <div id="footer"><p class="message">이미 회원이세요? <a href="../member/login.html">로그인</a></p></div>
+</div>
+
+</body>
+</html>

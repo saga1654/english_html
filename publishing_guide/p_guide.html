@@ -1,0 +1,484 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
+    <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+
+    <title>
+        LiveEnglishClass 모바일 퍼블리싱 관리 메인(HTML/CSS 가이드)
+    </title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+<!-- Docs master nav -->
+<header class="col-md-12">
+    <h2> LiveEnglishClass 모바일 퍼블리싱 관리 메인 (HTML/CSS 가이드)</h2>
+</header>
+
+
+<div class="container bs-docs-container">
+
+    <div class="row">
+        <div class="col-md-12" role="main">
+        <div class="bs-docs-section">
+            <h3 id="overview" class="page-header">개요</h3>
+            <p>본 가이드는 <span style="font-weight:bold">"LiveEnglishClass"</span> 모바일 퍼블리싱 작업 시 업무공유를 위해 제작되었으며 DTD, Encodng 방식을 비롯 HTML, CSS의 작성 규칙 및 네이밍 규칙, 접근성 확인 사항 등에 관한 내용을 담고 있다.</p>
+            <ul>
+                <li>LiveEnglishClass는 W3C에서 권고한 <strong>웹표준</strong>과 국가표준인 지침에 맞춰 <strong>웹/모바일 접근성</strong>을 준수하여 제작한다.</li>
+                <li>LiveEnglishClass는 <strong>internet explorer 7.0 버전 이상, Chrome, Safari, Firefox, Opera 최신 버전 브라우저</strong>에 맞춰 제작한다.</li>
+            </ul>
+            <!-- DTD 정의 및 설명-->
+            <h3 id="dtd" class="page-header">DTD (Document Type Definition)</h3>
+            <p>LiveEnglishClass 모바일 페이지의 DTD는 <strong>HTML5</strong>를 사용하며 아래와 같이 선언한다.</p>
+            <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+            <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"ko"</span><span class="nt">&gt;</span>
+            ...
+            <span class="nt">&lt;/html&gt;</span></code></pre></div>
+            <h5>1. HTML5 특징</h5>
+                <ul>
+                    <li>기존 HTML, XHTML에 비해 DTD 선언이 매우 간단하다.</li>
+                    <li>section, article, nav 등 구조를 나타낼 수 있는 tag들이 다양하게 생성되어 전 HTML, XHTML에 비해 의미있는 마크업이 가능해졌다.</li>
+                    <li>다양한 폼 type이 새로 추가되어 더 쉽고 강력해졌다.</li>
+                    <li>외부 플러그인없이 VIDEO, AUDIO 태그와 같은 기본 태그로 멀티미디어 요소가 지원된다. </li>
+                </ul>
+            <h5>2. HTML5 지원 현황</h5>
+                <ul><p>현재 ie8부터 일부 기능을 지원하고 있으며, html5를 지원하지 않는 브라우저를 위해 가벼운 js를 이용해서 해결한다.</p></ul>
+            <h5>3. HTML5의 새로운 요소</h5>
+                <ol style="list-style: none">
+                    <li>1) section</li>
+                    <p>일반적인 문서 또는 프로그램 섹션을 나타내며 보통 제목으로 시작하는 컨텐츠의 의미적 그룹을 나타낸다. 요소의 내용을 배포해도 이치에 맞다면 section 요소 대신 article요소를 사용하는 것이 맞으며 요소에 디자인적인 스타일이나 스크립트의 편의성을 위한 목적으로만 wrapper를 만든다면 div를 사용해야 한다. 섹션요소를 사용하기에 따라 제목 레벨을 고민하지 않고 h1요소를 사용해도 된다.</p>
+                    <li>2) nav</li>
+                    <p>nav요소는 다른 페이지 또는 동일 페이지의 다른 부분으로 이어주는 네비게이션 링크로 구성된 섹션을 나타내며, 주된 Navigation Block을 형성하는 섹션이 nav요소에 적합하다. 페이지의 '이전','다음'과 같은 페이지의 페이징 부분의 섹션을 담을 때 사용할 수도 있다.</p>
+                    <li>3) article</li>
+                    <p>article요소는 문서나 페이지, 사이트에서 독립적으로 배포 또는 재사용할 수 있는 섹션을 나타낸다. article요소는 중첩되어 사용될 수 있으며, 중첩되어 사용되었다면 내부의 article요소는 외부의 article요소와 관련이 있어야 한다. 예를 들면 blog 내용이 article요소안에 있고 댓글영역이 article로 되어있는 경우를 들 수 있다.</p>
+                    <li>4) aside</li>
+                    <p>aside 요소는 주위 내용과 접점을 이루면서 주위 내용과는 분리된 것으로 간주된다. aside요소가 나타내는 섹션은 출력시 사이드바 형태로 표현되는 것이 일반적이다.</p>
+                    <li>5) hgroup</li>
+                    <p>hgroup요소는 섹션의 제목을 나타내는 요소인데 섹션의 제목이 몇 개의 레벨을 가질 때, 예를 들어 부제목이나 제목 요소들을 그룹 짓기 위해 사용한다.</p>
+                    <li>6) header</li>
+                    <p>일반적으로 header요소는 보통 섹션의 제목(h1~h6, hgroup)을 포함하지만 섹션의 차례나 검색 폼, 관련 로고 등을 감싸는 용도로 사용할 수 있다.</p>
+                    <li>7) footer</li>
+                    <p>footer 요소는 가장 가까운 조상 요소인 섹션 컨텐츠 또는 섹션 루트의 푸터를 나타낸다. 푸터는 일반적으로 작성자가 누구인지, 연관된 문서에 대한 링크, 저작권 정보, 기타 흡사한 정보들을 담고 있다. footer는 일반적으로 섹션의 "마지막"에 나타나지만 꼭 그렇진 않다. </p>
+                    <li>8) address</li>
+                    <p>address요소는 가장 가까운 조상 요소인 article 또는 body 요소의 연락처 정보를 나타낸다. address요소에 임의의 주소(예를 들어 우편주소)를 사용하면 안되는데 그 주소가 실제 연락처라면 예외로 한다. 우편 주소를 마크업할때 적합한 요소는 p 요소이다. address요소는 연락처 정보 이외의 것을 담고 있으면 안되며 보통 다른 정보와 함께 footer요소안에 넣는다.</p>
+                    <li>9) figure</li>
+                    <p>이미지나 비디오, 일러스트, 다이어그램, 일반 텍스트 등을 하나의 단위로 묶어 줄때 즉, 텍스트건 다른 요소건 태그들을 하나의 블록으로 묶고 캡션을 포함할 때 유용하게 사용할 수 있다. &lt;figcaption&gt;태그는 &lt;figure&gt;로 묶인 박스를 설명하는 캡션으로 사용한다.</p>
+                    <li>10) time</li>
+                    <p>시간이나 날짜를 나타내주는 텍스트를 시스템이나 웹브라우저가 시간이나 날짜로 인지시키는 요소이며 datetime 속성을 가진다.</p>
+                    <li>11) form의 type 추가</li>
+                    <p>datetime, week, month, time, email, url, color, search, tel, file(multiple, accept)과 같은 type이 새로 추가 되었으며 모바일페이지 마크업쪽에서 사용하기로 한다.</p>
+                </ol>
+
+            <!-- Encoding 설명-->
+            <h3 id="encoding" class="page-header">Encoding</h3>
+            <h5>1. HTML</h5>
+            <p>HTML문서는 반드시 인코딩 정보를 선언한다. 신규 HTML문서를 작성할 때 기본 인코딩은 <strong>UTF-8</strong>을 원칙으로 한다. </p>
+            <div class="highlight"><pre class="code-box"><code>&lt;meta charset=”utf-8”&gt;</code></pre></div>
+            <p class="terms">※ <span>UTF-8</span> : 한글은 물론 세계의 다양한 언어를 문제 없이 표현할 수 있는 장점이 있는 반면 한글 한 자를 3bytes로 처리하여 문서 크기가 다소 커지지만, 공백이나 영문 한자는 1byte로 처리하는 유연한 방식이다.</p>
+            <h5>2. CSS</h5>
+            <p>CSS 도 역시 UTF-8을 원칙으로 하며 CSS 저장 시 UTF-8로 저장하며, 파일 최상단에 아래 코드를 삽입한다.</p>
+            <div class="highlight"><pre class="code-box"><code>@charset "utf-8";</code></pre></div>
+
+            <!-- doctitle 설명-->
+            <h3 id="doctitle" class="page-header">문서 제목</h3>
+            <p>접근성을 고려하여 간결하고 unique한 문서 제목을 사용한다.</p>
+            <div class="highlight"><pre class="code-box"><code>                    &lt;title&gt;로그인- LiveEnglishClass&lt;/title&gt;
+                &lt;title&gt;회원가입 - LiveEnglishClass&lt;/title&gt;
+                &lt;title&gt;화면 title - site 명&lt;/title&gt;</code></pre>
+            </div>
+
+            <!-- 디렉토리 / 파일구조 설명-->
+            <h3 id="js" class="page-header">디렉토리/파일 구조</h3>
+            <h5>1. 디렉토리 구조</h5>
+                <code>추후 적용예정</code>
+            <h5>2. 사용한 JS</h5>
+                <ul>
+                    <li><strong>html5-support.js</strong> - HTML5 태그 인식 스크립트</li>
+                    <li><strong>jquery-1.11.3.min.js</strong> - jquery js</li>
+                    <li><strong>jquery-ui.min.js</strong> - UI 조작에 필요한 공통 스크립트 요소 (Tab, Menu, Grid 등)</li>
+                    <li><strong>login.js</strong> - 로그인에 필요한 js</li>
+                    <li><strong>mobile_script.js</strong> - </li>
+                    <li><strong>swiper.min.js</strong> - </li>
+                </ul>
+            <h5>3. 사용한 CSS</h5>
+                <ul>
+                    <li><strong>common.css</strong> - reset, 공통 사용</li>
+                    <li><strong>jcarousel.responsive.css</strong> - 모바일 페이지 공통 사용</li>
+                    <li><strong>jquery-ui.min.css</strong> - 모바일 페이지 공통 사용</li>
+                    <li><strong>mobile_banner.css</strong> - 모바일 메인페이지 광고용 사용</li>
+                    <li><strong>mobile_main.css</strong> - 모바일 메인페이지 사용</li>
+                    <li><strong>mobile_member.css</strong> - 모바일 로그인 및 회원가입 사용</li>
+                    <li><strong>mobile_sub.css</strong> - 모바일 서브페이지 사용</li>
+                    <li><strong>swiper.css</strong> - 모바일 페이지 사용</li>
+                </ul>
+
+            <!-- HTML 규칙 설명-->
+
+            <h3 id="rule-html" class="page-header">HTML 규칙</h3>
+            <h5>1. 코드 작성 규칙</h5>
+            <p>1) 기본 작성 규칙</p>
+                <ul>
+                    <li>HTML은 위의 DTD의 명세에 맞게 작성하며, 개발 이관 전 W3C Validation Check를 통과해야함</li>
+                    <li>모든 요소와 속성은 소문자로 작성함</li>
+                    <li>속성값은 큰따옴표("")로 묶음</li>
+                    <li>특수기호는 character entity reference 사용 함 ref) <a href="http://www.w3schools.com/tags/ref_symbols.asp" target="_blank">HTML Entity 참조</a></li>
+                </ul>
+            <p>2) 들여쓰기/빈줄 규칙</p>
+                <ul>
+                    <li>&middot; 부모 구조 관계를 나타내며 코드 가독성을 위해 들여쓰기를 준수하고 들여쓰기 기준은 space 4칸으로 함</li>
+                    <li>&middot; 의미있는 객체를 구분하기 위해 코드 그룹 간 1줄씩 빈 줄을 만드는 것은 허용하며 빈 줄의 간격은 1줄을 초과하지 않음</li>
+                </ul>
+            <p>3) 주석</p>
+             <div class="highlight"><pre class="code-box"><code>                주석 시작 : &lt;!-- 주석내용 --&gt;
+            주석 종료 : &lt;!-- //주석내용 --&gt;
+            퍼블리셔 전달 : &lt;!-- [P] 별도 class 추가 --&gt;
+            개발자 전달 : &lt;!-- [D] 개발시 수정가능 --&gt;</code></pre><div class="highlight">
+                <ul>
+                    <li>일반 컨텐츠 블록 구분을 위한 주석과 퍼블리셔, 개발자에게 전달용 주석([P],[D])을 구분해서 사용함</li>
+                    <li>시작과 종료 주석의 내용은 동일해야 하며 주석기호와 주석 내용 사이에는 공백 한 칸이 있어야 함</li>
+                    <li>컨텐츠 블룩 구분이외의 퍼블리셔, 개발자 전달 용으로 작성한 주석은 실제 서비스 적용 전 삭제함</li>
+                </ul>
+            <p>4) 선언순서</p>
+            <p>코드간 일관성을 위해 아래와 같은 순서대로 작성한다.<br>
+                type - id - name - alt- title - class - style
+            </p>
+            <h5>2. 요소 작성 규칙</h5>
+                <ol style="list-style: none">
+                    <li>1) div</li>
+                    <li>기존 버전의 html과 달리 html5에서는 디자인요소 적용을 위한 그룹핑이나 스크립트때문에 필요한 경우를 제외하고는 div사용을 지양한다.</li>
+                    <li>2) section </li>
+                    <li>의미적으로 제목을 갖는 컨텐츠의 의미적 그룹을 나타내며 section 안에서 제목은 레벨을 고민하지 않고 h1으로 마크업한다.</li>
+                    <li>3) article</li>
+                    <li>문서나 페이지, 사이트에서 독립적으로 배포 또는 재사용할 수 있는 섹션을 나타내며 중첩 사용가능하다.</li>
+                    <li>4) header</li>
+                    <li>컨텐츠의 머리글 역학을 하며 보통 컨텐츠의 제목은 물론, 차례, 검색폼, 관련 로고 등을 감싸는 등의 역할을 한다.</li>
+                    <li>5) footer </li>
+                    <li>footer요소는 가장 가까운 조상 요소인 섹션 컨텐츠 또는 섹션 루트의 푸터를 나타낸다.</li>
+                    <li>6) form, fieldset, legend</li>
+                    <li>form, fieldset, legend 요소는 함께 사용하며 필요에 따라 개별적으로 사용할 수 있다.</li>
+                    <li>7) input 요소</li>
+                    <li>HTML5에 새로 등장한 type(ex:search, url, tel 등)은 사용하지 않으며 label과 연결시키며 연결할 label이 존재하지 않는 경우 input 요소에 attribute 선언이 필요한 경우 아래를 참조한다.</li>
+                    <ul>
+                        <li>input checked="checked"</li>
+                        <li>input disabled="disabled"</li>
+                        <li>input required="required"</li>
+                    </ul>
+                    <li>8) textarea</li>
+                    <li>textarea는 cols, rows Attribute는 페이지에 맞게 임의로 제공하며 최소 30,5 이상이 되도록 선언한다.  연결할 label이 존재하지 않는 경우 title을 사용하여도 된다.</li>
+                    <li>9) 각 버튼성 요소</li>
+                    <li>단순 링크성 버튼은 a 태그를 이용하고, 폼 전송 역할은 button type="submit" 을 이용하며 UI조작에 필요한 기능성 버튼은 button type="button"을 이용한다.</li>
+                    <li>10) 표 요소</li>
+                    <li>레이아웃용 table은 지양하고 데이터테이블과 디자인이 table식으로 구성 된 fieldset 형식의 요소에만 사용한다.</li>
+                        <ul>
+                            <li>HTML5에서는 summary 속성은 사용하지 않으며 caption 이나 table밖에 요약성 정보를 필수로 제공한다.</li>
+                            <li>제목성 컬럼 th에는 scope 속성을 반드시 선언하며 셀병합 테이블의 경우는 scope대신 id, headers 속성을 사용한다.</li>
+                        </ul>
+                    <li>11) iframe </li>
+                    <li>iframe은 페이지 성능에 영향을 주기 때문에 가급적 사용하지 않는다. 부득이하게 사용할 경우 title에 제목을 반드시 표기한다. 내용이 없는 빈 프레임인경우 title="빈프레임" 이라고 명시해준다.</li>
+                </ol>
+             <!--CSS 규칙-->
+            <h3 id="rule-css" class="page-header">CSS 규칙</h3>
+            <h5>1. 코드 작성 규칙</h5>
+            <p>1) 기본 작성 규칙</p>
+            <ul>
+                <li>CSS는 사용 가능한 hack과 css3 속성을 제외하고 W3C Validation을 통과하여야 한다.</li>
+                <li>모든 속성은 영문 소문자로만 작성한다.</li>
+                <li>공백이 포함된 폰트명, 한글 폰트명, 문자열 데이터 타입, filter 속성의 파라미터값은 작은따옴표('')를 사용한다.</li>
+                <li>생략해도 무방한 작은따옴표('')는 생략한다. ex) background:url(image.png);</li>
+                <li>축약이 가능한 속성은 가능한 축약해서 사용한다.</li>
+                <li>마지막 속성의 세미콜론은 지양한다.</li>
+                <li>쉼표로 구분되는 선택자 간 공백은 제거한다. </li>
+                <li>속성 간 공백 및 속성 값 사이 공백은 제거한다.</li>
+                <li>속성, 속성 값 사이 줄 바꿈은 허용하지 않는다. 단, media query 처럼 중괄호가 중첩되는 경우는 예외로 함</li>
+                <li>특수한 경우를 제외한 일반적인 코딩 시 스타일 속성의 inline 사용을 지양함</li>
+                <li>다른 곳과의 충돌을 고려해 공통요소가 아니라면 unique한 클래스를 사용함</li>
+            </ul>
+            <p>2) 속성 선언 순서</p>
+            <p>속성을 선언할 때는 레이아웃과 관련이 큰 것부터 시작해서 레이아웃이 무관한 것 순서로 선언한다. <br>
+                display, overflow, float, position, width, height, margin, height, margin, padding, border, background, font ..</p>
+
+            <p>3) 폰트 선언</p>
+            <p>
+                영문폰트만 선언할 경우 특정 브라우저에서 폰트를 올바르게 출력하지 못하는 경우가 있으므로 한글 폰트 선언 시 한글, 영문 폰트를 모두 선언한다.
+            </p>
+            <p>4) 주석</p>
+                 <div class="highlight"><pre class="code-box"><code>/* 주석 */</code></pre></div>
+                <ul>
+                    <li>주석 기호와 주석 내용 사이에는 반드시 공백 한 칸이 있어야 주석 기호와 주석 내용 사이의 줄바꿈은 허용하지 않는다.</li>
+                    <li>종료 주석은 사용하지 않는다.</li>
+                    <li>작업간 편의를 위해 작성한 주석은 서비스 적용 시 반드시 삭제한다.</li>
+                </ul>
+            <p>5) File Verification</p>
+            <p>CSS 파일 작성 후 NHN에서 제공하는 N-MET(NHN Markup Enhancement Tool)을 사용하여 공백, 마지막 ; 삭제, 속성 선언순서 등을 최적화한다.
+                단, css3속성은 변환 시 bug가 있는 경우가 있으니 별도로 확인해야한다.</p>
+            <p>2. 선택자 사용 규칙</p>
+                <ul>
+                    <li>공통 선택자는 성능에 영향을 미치므로 사용지양한다.</li>
+                    <li>id선택자는 개발쪽과 충돌이 날 수 있으니 퍼블리싱영역에서는 한 문서에 반드시 한 번만 사용하며 앵커로서 가치가 있는 경우만 id를 사용한다. </li>
+                    <li>크로스브라우징을 이용해 가상클래스를 사용한다.(ex: :first-child)</li>
+                    <li>크로스브라우징을 이용해 복합선택자(하위선택자, 자식선택자, 인접선택자)를 사용한다. (ex: A B, A>B, A+B)  </li>
+                </ul>
+
+            <!--네이밍 규칙-->
+            <h3 id="rule-naming" class="page-header">네이밍 규칙</h3>
+            <h5>1. HTML 파일명</h5>
+            <p>LiveEnglsihClass의 모바일 대상을 크게 메인페이, 메인페이지 광고, 로그인 및 회원가입 페이지, 마이페이지, 서브페이, 수강신청, 레벨테스트 총7개로 나눠 이니셜로 구분한 후 각 타입별 1depth메뉴는 영문화하여 표기하고 2depth부터는 숫자화하여 표기한다. 자세한 규칙은 아래를 참조한다.</p>
+            <h5>2. ID명</h5>
+            <p>아이디명은 카멜표기법을 사용하여 class명과 구분을 쉽게 한다.<br>
+                ex) id="contentWrap"
+            </p>
+            <p class="terms">※<span>카멜표기법(Camel Notation)</span> : 카멜표기법은 단어와 단어 사이를 대소문자로 구분하는 방법으로 낙타의 혹을 닮아서 붙여진 표기방법이다.<br>Camel Notation uses capital letters to indicate the break between words when more than one word is used to define a variable.  Camel is named such because the capital letters separating the words look like little camel humps.</p>
+            <h5>3. Class명</h5>
+            <p>클래스명은 하이픈(-)방식을 사용하여 연결하며 첫글자는 소문자로 시작하고 숫자, 기호 등을 사용하지 않는다. <br>
+                ex) class="insurance-guide"
+            </p>
+            <h5>4. Image명</h5>
+            <p>이미지명은 이미지 분류 목적에 따라 prefix_를 사용하여 구분하며 상세내용은 아래를 참고한다. 두 가지 사항이 겹칠 경우 아래의 분류를 우선해서 순차적으로 구분한다. <br> ex) 탭의 배경이미지 : tab_bg_000.png, 버튼안의 아이콘 : btn_icon_000.png <br>
+                이미지 저장 방식은 좌측 "이미지 저장 가이드"를 참조한다.</p>
+            <p>비주얼 : v_ / 버튼 : btn_ / 배경 : bg_ / 탭 : tab_ / 아이콘 : icon_ / 메뉴 : menu_ / 블릿 : bl_ / 페이징 : pg_ / 텍스트 : txt_ / 레이어 : ly_ / 라인 : ln_ / 배너 : bnn_</p>
+            <h5>5. 변수명</h5>
+            <p>스크립트 작성 시 필요한 경우 사용하는 변수명은 언더스코어(_) 방식을 사용하여 id, class명과 구분한다.<br>
+                ex) var section_height
+            </p>
+             <!--초기파일-->
+            <h3 id="initialization" class="page-header">초기파일</h3>
+            <h5>1. HTML</h5>
+            <div class="highlight"><pre class="code-box"><code>            &lt;!DOCTYPE html&gt;
+            &lt;html lang="ko"&gt;
+            &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content=""&gt;
+            &lt;title&gt;페이지명 - LiveEnglishClass&lt;/title&gt;
+            &lt;link rel="stylesheet" type="text/css" href="common.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+
+            &lt;/body&gt;
+                &lt;/html&gt;</code></pre></div>
+             <h5>3. CSS</h5>
+             <div class="highlight"><pre class="code-box"><code>@charset "utf-8";
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0} body,input,textarea,select,table{font-family:'맑은 고딕',Malgun Gothic,’돋움’,Dotum,AppleGothic,sans-serif;font-size:14px}</code></pre>
+            </div>
+
+            <!--접근성 확인 사항-->
+            <h3 id="howtoaccessibility" class="page-header">접근성 확인 사항</h3>
+                <h5>1. 인식의 용이성(Perceivable)</h5>
+                <p>1) 대체텍스트</p>
+                <ul>
+                    <li><strong>이미지의 alt 성격 구분</strong> - 이미지 요소의 alt속성은 필수요소이며 의미있는 이미지인 경우 이미지가 제공하는 콘텐츠를 그대로 넣고, 의미가 없는 블릿이나 배경은 alt속성의 값을 비워둔다.
+                        <p>ex) alt=""</p></li>
+                    <li><strong>input type="image"라면 alt 확인</strong> - 이미지버튼인 경우 input type="image"를 사용할 때 alt 제공한다.
+                        <p>ex) input type="image" src="" alt="확인"</p></li>
+                    <li><strong>이미지맵 alt 확인</strong> - 이미지맵 사용은 최대한 지양하되 불가피하게 사용해야할 경우 각각 area별로 alt 제공한다.
+                        <p>ex)&lt;area alt="ENGLISH" shape="rect"coords="10,5,66,19" href="/en/"&gt;</p></li>
+                    <li><strong>이미지, 그래프, 차트에 설명문 제공 </strong> - 이미지 또는 그래프나 차트 콘텐츠에는 반드시 대체정보(row data, 대체텍스트)가 제공되어야 한다. 스토리보드에 명시되어있지 않다면 기획쪽에 문의할것</li>
+                    <li><strong>alt, title 구분할것</strong> - alt와 title속성의 목적은 다르다. 이미지에 대한 대체텍스트는 alt 속성을 이용하며 부가적인 설명이 필요한 경우 title 속성을 이용한다.
+                        <p>ex) img src="" alt="자세한정보보기" title="새창이동"</li>
+                </ul>
+                <p>2) 멀티미디어대체수단</p>
+                <ul>
+                    <li><strong>동영상 콘텐츠 자막,원고 또는 수화 제공 </strong> - 홍보나 광고 소개 페이지의 경우 기존의 동영상 컨텐츠의 접근성을 확보할 수 있도록 수정이 필요하다. 현업의 확인이 필요하므로 스토리보드에 이런 컨텐츠가 있는 경우 PL에게 확인한다.</li>
+                </ul>
+                <p>3) 명료성</p>
+                <ul>
+                    <li><strong>그래프, 차트 이미지 컨텐츠의 시각적 구분 </strong> - 그래프나 차트의 경우 색상만으로 범례구분이 된 경우 흑백 디스플레이 사용자나 흑백 인쇄물을 보는 사용자에게 문제가 되므로 디자이너에게 수정을 요청해야 한다. </li>
+                    <li><strong>필수항목 구분 </strong> - 필수입력 항목의 경우 시각적 구분이 색상만으로 된 경우 흑백 디스플레이 사용자나 흑백 인쇄물을 보는 사용자에게 문제가 되므로 디자이너에게 수정을 요청해야 한다. </li>
+                    <li><strong>링크 텍스트 시각적 구분 </strong> - 링크된 텍스트의 경우 시각적으로 명확히 구분될 수 있도록 underline이나 color 구분을 줘야한다. css로 없애지 않는다.</li>
+                    <li><strong>오류메세지 시각적 구분 </strong> - 오류 메세지를 빨간색으로만 뿌려주는 식으로 컬러로만 구분하지 않고 오류임을 명확하게 인식하도록 제공해야 한다.(오류명시, 굵은 글꼴, 테두리 사용 등) </li>
+                    <li><strong>시각에 의존한 문구 확인 </strong> - 시각에 의존한 문구가 사용된 경우 기획팀에 수정을 요청한다.
+                        <p>ex) 오른쪽 확인 버튼을 누르세요, 좌측 하단 링크를 클릭하세요, 빨간테두리의 안내문구를 확인하세요</li>
+                    <li><strong>의미가 있는 이미지역할을 하는 특수기호 구분</strong> - 의미가 있는 이미지역할을 하는 특수기호 구분인 경우 HTML Entity사용보다 이미지로 제공하고 대체텍스트를 제공하는 것이 올바르다.</li>
+                    <li><strong>텍스트가 작고 흐린 경우 </strong> - 텍스트의 크기가 작고 흐린 경우 디자이너에게 요청해 명도대비를 확인한다.</li>
+                    <li><strong>동영상 콘텐츠의 정지기능</strong> - 동영상콘텐츠의 경우 처음부터 실행되지 않도록 정지상태를 디폴트로 제공한다. </li>
+                </ul>
+
+                <h3>2. 이해의 용이성 (Understandable)</h3>
+                <p>1) 가독성</p>
+                <ul>
+                    <li><strong>기본 언어 표시</strong> - 사용하는 언어를 명시하며 PL은 HTML초기 파일에 삽입 후 배포하도록 한다. </li>
+                </ul>
+                <p>2) 예측 가능성</p>
+                <ul>
+                    <li><strong>서식 입력 후 제출 버튼은 반드시 type="submit" 버튼 제공</strong> - 스크립트로만 서식을 전송되도록 하지 않고 명확히 서식값 제출 버튼을 제공한다.</li>
+                    <li><strong>새창 알림</strong> - 새창으로 열리는 링크는 title로 "새창이동" 이라고 명시해준다.</li>
+                    <li><strong>페이지가 로드될 때 자동으로 팝업 창이 열리는 경우</strong> - 페이지가 로드될 때 자동으로 팝업이 열리지 않도록 한다.(운영 시 주의사항)</li>
+                </ul>
+                <p>3) 콘텐츠의 논리성</p>
+                <ul>
+                    <li><strong>메뉴 구조 작성 시 ul li 구조 선형화 </strong> - 서브 메뉴의 경우 상위 메뉴과 논리적 관계성을 반영하여 마크업한다.</li>
+                    <li><strong>레이어팝업의 구조 선형화</strong> - 레이어팝업의 구조도 클릭 유발 컨텐츠의 바로 다음에 위치하여 논리적으로 마크업한다.</li>
+                    <li><strong>빈 공백으로 글자 간격 조정 금지</strong> - 공백특수기호를 이용하여 공백을 처리하지 않는다. (화면낭독프로그램에서 공백을 넣으면 다르게 발음될 수 있음) 이런 경우 css의 letter-spacing 속성이나 text-align 속성을 이용해 조절한다.</li>
+                    <li><strong>테이블의 경우 필수 속성들을 준수</strong> - 테이블의 경우 필수 속성( caption, scope, thead, tbody, id, headers 등)들을 준수하여 기입하며 DTD가 HTML5이니 summary속성은 사용하지 않으며 대신 caption이나 요약정보를 별도로 제공한다.</li>
+                </ul>
+
+
+
+            <h3 id="font" class="page-header">Font 가이드</h3>
+            <p>기본 font는 맑은고딕 14px를 사용하며 컨텐츠의 font 단위는 em방식을 사용한다.</p>
+            <p>
+                <span style="display:block; font-family:'맑은 고딕'; font-size:30px; font-weight:bold; letter-spacing:-2px;">공지사항</span>
+                <span style="display:block; font-family:'맑은 고딕'; font-size:24px;">맑은고딕24px</span>
+                <span style="display:block; font-family:'맑은 고딕'; font-size:22px;">맑은고딕22px</span>
+                <span style="display:block; font-family:'맑은 고딕'; font-size:20px;">맑은고딕20px</span>
+                <span style="display:block; font-family:'맑은 고딕'; font-size:18px;">맑은고딕18px</span>
+                <span style="display:block; font-family:'맑은 고딕'; font-size:16px;">맑은고딕16px</span>
+                <span style="display:block; font-family:'맑은 고딕'; letter-spacing:-1px;">맑은고딕14px</span>
+                <span style="display:block; font-family:'맑은 고딕'; font-size:12px;">맑은고딕12px</span>
+                <span style="display:block; font-family:'맑은 고딕'; font-size:11px;">맑은고딕11px</span>
+            </p>
+            <div class="file-list">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>px</th>
+                        <th>em</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="center">11px = </td>
+                        <td> 0.786em</td>
+                    </tr>
+                    <tr>
+                        <td class="center">12px = </td>
+                        <td>0.857em</td>
+                    </tr>
+
+                    <tr>
+                        <td class="center">14px = </td>
+                        <td>1em</td>
+                    </tr>
+                    <tr>
+                        <td class="center">15px = </td>
+                        <td>1.071em</td>
+                    </tr>
+                    <tr>
+                        <td class="center">16px = </td>
+                        <td>1.143em</td>
+                    </tr>
+                    <tr>
+                        <td class="center">17px = </td>
+                        <td>1.214em</td>
+                    </tr>
+                    <tr>
+                        <td class="center">18px = </td>
+                        <td>1.286em</td>
+                    </tr>
+                    <tr>
+                        <td class="center">20px = </td>
+                        <td>1.429em</td>
+                    </tr>
+                    <tr>
+                        <td class="center">22px = </td>
+                        <td>1.571em</td>
+                    </tr>
+                    <tr>
+                        <td class="center">24px = </td>
+                        <td>1.714em</td>
+                    </tr>
+                    <tr>
+                        <td class="center">37px = </td>
+                        <td>2.7em</td>
+                    </tr>
+                </table>
+            </div>
+
+                 <h3 id="publishing" class="page-header"> 퍼블리싱 테이블</h3>
+                <table class="table st" >
+                    <thead class="text-center">
+                    <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">1depth</th>
+                        <th scope="col">2depth</th>
+                        <th scope="col">3depth</th>
+                        <th scope="col">4depth</th>
+                        <th scope="col">5depth</th>
+                        <th scope="col">퍼블리싱 보기</th>
+                        <th scope="col">디자인</th>
+                        <th scope="col">비고</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>메인</td>
+                        <td>메인페이지</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../home/home.html">home.html</a></td>
+                        <td>디자인 수급(06.26)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td></td>
+                        <td>광고용페이지</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../banner/step1.html">step1.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>로그인 및 회원가입</td>
+                        <td>로그인</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../member/login.html">login.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td></td>
+                        <td>비밀번호 찾기</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../member/pw.html">pw.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td></td>
+                        <td>회원가입</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../member/sign_up.html">sign_up.html</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="text-center">
+            Copyright©2017 <strong>LiveEnglishClass</strong>. All Rights Reserved.<br/>
+            본 퍼블리싱 가이드 페이지는 LiveEnglishClass 프로젝트의 퍼블리싱쪽 업무 관리를 위해 임의로 제작한 페이지입니다.
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

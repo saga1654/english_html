@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+
+
+#wrap {letter-spacing:-1px;height:100%; width:100%}
+.white{color:#ffffff;}
+.color00a0e9{color:#00a0e9;}
+.bg2 {
+    background-image:url(../images/add/live_add_02_bg.png); /*이미지의 위치경로*/
+    background-position:center center;/*배경이미지는 항상 수직 & 수평 중심*/
+    background-repeat: no-repeat;/*배경이미지는 반복하지 않음(타일형식처럼 반복표시되지 않기 위함)*/
+    background-size:cover;/* 이 옵션 설정이 배경이미지의 container크기에 따라 지속적인 자동조정을 담당하는 부분*/
+    background-color:#0496d5;/* 배경이미지가 로드되는 동안 보이게됨 색상지정*/
+}
+/*모바일 디바이스 용*/
+/*
+@media only screen and (max-width: 750px) {
+    /* 기존 배경이미지 대비 93% 적은 용량을 차지하는 이미지로 변경한다
+       이는 모바일 디바이스의 네트워크환경에서도 페이지 로드 속도를 빠르게 하기 위함이다. */
+
+/*.bg2 {
+        background-image: url(../images/add/live_add_02_bg.png);
+    }
+}
+*/
+.bg3 {
+    background-image:url(../images/add/live_add_03_bg.png); /*이미지의 위치경로*/
+    background-position:center center;/*배경이미지는 항상 수직 & 수평 중심*/
+    background-repeat: no-repeat;/*배경이미지는 반복하지 않음(타일형식처럼 반복표시되지 않기 위함)*/
+    background-size:cover;/* 이 옵션 설정이 배경이미지의 container크기에 따라 지속적인 자동조정을 담당하는 부분*/
+    background-color:#FFFFFF;/* 배경이미지가 로드되는 동안 보이게됨 색상지정*/
+}
+.bg4 {
+    background-image:url(../images/add/live_add_04_bg.png); /*이미지의 위치경로*/
+    background-position:center center;/*배경이미지는 항상 수직 & 수평 중심*/
+    background-repeat: no-repeat;/*배경이미지는 반복하지 않음(타일형식처럼 반복표시되지 않기 위함)*/
+    background-size:cover;/* 이 옵션 설정이 배경이미지의 container크기에 따라 지속적인 자동조정을 담당하는 부분*/
+    background-color:#FFFFFF;/* 배경이미지가 로드되는 동안 보이게됨 색상지정*/
+}
+
+.bg6 {
+    background-image:url(../images/add/live_add_06_bg.png); /*이미지의 위치경로*/
+    background-position:center center;/*배경이미지는 항상 수직 & 수평 중심*/
+    background-repeat: no-repeat;/*배경이미지는 반복하지 않음(타일형식처럼 반복표시되지 않기 위함)*/
+    background-size:cover;/* 이 옵션 설정이 배경이미지의 container크기에 따라 지속적인 자동조정을 담당하는 부분*/
+    background-color:#FFFFFF;/* 배경이미지가 로드되는 동안 보이게됨 색상지정*/
+}
+
+.bg7 {
+    background-image:url(../images/add/live_add_07_bg.png); /*이미지의 위치경로*/
+    background-position:center center;/*배경이미지는 항상 수직 & 수평 중심*/
+    background-repeat: no-repeat;/*배경이미지는 반복하지 않음(타일형식처럼 반복표시되지 않기 위함)*/
+    background-size:cover;/* 이 옵션 설정이 배경이미지의 container크기에 따라 지속적인 자동조정을 담당하는 부분*/
+    background-color:#FFFFFF;/* 배경이미지가 로드되는 동안 보이게됨 색상지정*/
+}
+
+.bg8 {
+    background-image:url(../images/add/live_add_08_bg.png); /*이미지의 위치경로*/
+    background-position:center center;/*배경이미지는 항상 수직 & 수평 중심*/
+    background-repeat: no-repeat;/*배경이미지는 반복하지 않음(타일형식처럼 반복표시되지 않기 위함)*/
+    background-size:cover;/* 이 옵션 설정이 배경이미지의 container크기에 따라 지속적인 자동조정을 담당하는 부분*/
+    background-color:#FFFFFF;/* 배경이미지가 로드되는 동안 보이게됨 색상지정*/
+}
+
+.bg9 {
+    background-image:url(../images/add/live_add_09_bg.png); /*이미지의 위치경로*/
+    background-position:center center;/*배경이미지는 항상 수직 & 수평 중심*/
+    background-repeat: no-repeat;/*배경이미지는 반복하지 않음(타일형식처럼 반복표시되지 않기 위함)*/
+    background-size:cover;/* 이 옵션 설정이 배경이미지의 container크기에 따라 지속적인 자동조정을 담당하는 부분*/
+    background-color:#FFFFFF;/* 배경이미지가 로드되는 동안 보이게됨 색상지정*/
+}
+.bg10 {
+    background-image:url(../images/add/live_add_10_bg.png); /*이미지의 위치경로*/
+    background-position:center center;/*배경이미지는 항상 수직 & 수평 중심*/
+    background-repeat: no-repeat;/*배경이미지는 반복하지 않음(타일형식처럼 반복표시되지 않기 위함)*/
+    background-size:cover;/* 이 옵션 설정이 배경이미지의 container크기에 따라 지속적인 자동조정을 담당하는 부분*/
+    background-color:#FFFFFF;/* 배경이미지가 로드되는 동안 보이게됨 색상지정*/
+}
+.bg2_txt {
+    padding: 50px 0 0 45px;
+    max-width: 100%;
+    max-height:100%;
+
+
+}
+.bg3_txt {
+    padding: 200px 20px 200px 20px;
+    max-width: 100%;
+    max-height:100%;
+    font-size: 2em;
+}
+.bg6_txt{
+    padding: 100px 20px 20px 20px;
+    max-width: 100%;
+    max-height:100%;
+    font-size: 1.5em;
+}
+.bg7_txt {
+    padding: 100px 20px 100px 20px;
+    max-width: 100%;
+    max-height:100%;
+    font-size: 1.5em;
+}
+.title {
+    color:#fff;
+    display: block;
+    font-size: 2em;
+    margin-left: 0;
+    margin-right: 0;
+}
+.subtitle {
+    color:#00a0e9;
+    display: block;
+    font-size: 3em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 1em;
+}
+
+.view_btn, .class_btn{
+    background-color:#0496d5;
+    color:#ffffff;
+    padding: 15px 32px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    margin-top: 10px;
+    width:60%;
+}
+
+.test_btn{
+    background-color:#e72d34;
+    color:#ffffff;
+    padding: 15px 32px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    width:80%;
+}
+
+.test_btn2{
+    background-color:#e72d34;
+    color:#ffffff;
+    padding: 15px 32px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    width:80%;
+}
+
+
+.bold {font-weight: bold;}
+.center{text-align: center;}
+.paddingTop23em{padding-top: 23em;}
+.paddingBottom5em{padding-bottom: 5em;}
+.paddingBottom10em{padding-bottom: 10em;}
+
+.h1 {display: block;font-size: 1.51em;margin-top: 0.8em;margin-bottom: 0.8em;margin-left: 0;margin-right: 0;line-height: 1.67em}
+.h2 {display: block;font-size: 1.34em;margin-top: 0.8em;margin-bottom: 0.8em;margin-left: 0;margin-right: 0;line-height: 1.67em}
+.h3 {display: block;font-size: 1.17em;margin-top: 0.8em;margin-bottom: 0.8em;margin-left: 0;margin-right: 0;line-height: 1.67em}
+.h4 {display: block;font-size: 1em;margin-top: 0.8em;margin-bottom: 0.8em;margin-left: 0;margin-right: 0;line-height: 1.67em}
+.h5 {display: block;font-size: .8em;margin-top: 0.8em;margin-bottom: 0.8em;margin-left: 0;margin-right: 0;line-height: 1.67em}
+
+.step1_sub{background-color:#3f3b3a; text-align:center;padding-top:10px; padding-bottom:10px;}
+
+
+.left20{text-align:left;display: block;padding-left:20px;margin-right:20px;padding-top:10px;}
+
+.facebook{
+    background-color: #3b5998;
+    color:#ffffff;
+    padding: 15px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 30px;
+    width: 80%;
+}
+
+
+/*푸터*/
+
+#footer {background-color:#2e2c2b;color:#FFFFFF;font-size:14px;padding:14px 0;text-align:center;}
+#footer .address {line-height:1em;}
+.copyright {font-size:0.3em;}
